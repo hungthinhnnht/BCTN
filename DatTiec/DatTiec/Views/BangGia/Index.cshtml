@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+<div class="container">
+    <div class="sk_banner">
+        <img src="/Content/img/skbanner.jpg">
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+           
+            <div class="list_ma">
+                
+                <h2 class="text-center">
+                    <span class="tvtc-tit">
+                        DANH SÁCH LOẠI MÓN
+                    </span>
+                </h2>
+                <div class="row">
+                    @foreach (DatTiec.Models.LoaiMon n in ViewBag.monan)
+                    {
+                        <div class="col-md-4">
+
+                            @*<a href="@Url.Action("LayDanhSachMon", "BangGia", new { id = @n.idloaimon })">@n.Tenloai</a>*@
+                            <div class="loaidv_item">
+                                <a href="/BangGia/LayDanhSachMon/@n.idloaimon">@n.Tenloai</a>
+                                <img src="~/Content/img/tiec2.jpg" />
+                            </div>
+                        </div>
+                    }
+            </div>
+            </div>
+                <div class="instruction">
+                    <p>*Quý khách có thể chọn tự do các món trong menu.</p>
+                </div>
+            
+        </div>
+        <div class="col-md-4">
+            @Html.Action("TinTuc", "DV")
+        </div>
+    </div>
+   
+
+    <div>
+        <div>
+         
+            <br />
+            <div class="row" style="display:none">
+                <div class="col-md-6">
+                   TNE MENU
+                   
+                   
+                </div>
+        
+                <div class="col-md-6" id="menutest">
+                   DANH SÁCH MÓN
+                </div>
+                    @*<div class="col-md-6">
+                @foreach (var item in ViewBag.dsmontungmenu)
+                {
+                    <div>
+                        <div style="display:none" class="TenMenu">
+                            <b  id="@item.MaSoMenu">@item.MaSoMenu</b><br />
+                        </div>
+
+                        <b  id="@item.idMonAn">@item.TenMonAn</b><br />
+
+                    </div>
+
+                }
+
+            </div>*@
+
+                </div>
+         
+
+           
+
+
+        </div>
+    </div>
+</div>
+@Html.Action("GioHang", "Home")
+
+<script>
+    $(document).ready(function () {
+        
+    })
+    $.ajax({
+        url: "/BangGia/LayMenuID", // we are calling json method
+        type: "GET",
+        success: function (response) {
+            $.each(response.mn, function (i, item) {
+                //alert(response.mn[i].Tengoi);
+               
+                $.ajax({
+                            url: "/BangGia/LayMonTungMenu", // we are calling json method
+                            data: { Masomenu: response.mn[i].Masomenu},
+                            success: function (response1) {
+                                // alert(response);
+                                $('#menutest').append("<select class=" + response.mn[i].Masomenu + ">");
+                                $(response1).each(function (i, e) {
+                                   // alert(e.idmonan);
+                                    $('.'+response.mn[i].Masomenu).append(
+                                        $('<option/>')
+                                        .attr('value', e.idmonan)
+                                        .text(e.idmonan)
+                                    );//"<select class=" + response.mn[i].Masomenu + "><option>" + e.idmonan + "</option></select>"
+                                    //    //$('<option/>')
+                                    //    //.attr('value', e.idmonan)
+                                    //    //.text(e.idmonan)
+                                    //);
+                                });
+                            },
+                            error: function (ex) {
+                                alert('Lỗi load món: ' + ex);
+                            }
+                        });
+
+                
+            })
+            //if (response)
+            //{
+            //    alert(response.mn[0].Masomenu);
+            //}
+            //else
+            //{
+            //    alert("cc");
+            //}
+            //$(response.data).each(function (i, e) {
+            //    alert(e.Masomenu);
+            //    //$("#" + msmn).append(
+            //    //    $('<option/>')
+            //    //    .attr('value', e.idmonan)
+            //    //    .text(e.idmonan)
+            //    //);
+            //});
+        },
+        error: function (ex) {
+            alert("Nhut:  " + ex);
+
+        }
+    });
+    //var msmn = '';
+    //$('TenMenu').each(function () {
+    //    msmn = $(this).attr('id');
+    //    alert(msmn);
+    //    //getmenu(msmn);
+    //    // function getmenu(e) {
+    //    //  var Mamenu = e;
+    //    $.ajax({
+    //        url: "/BangGia/LayMonTungMenu", // we are calling json method
+    //        data: { Masomenu: msmn },
+    //        success: function (response) {
+    //            // alert(response);
+    //            $(response).each(function (i, e) {
+    //                $("#" + msmn).append(
+    //                    $('<option/>')
+    //                    .attr('value', e.idmonan)
+    //                    .text(e.idmonan)
+    //                );
+    //            });
+    //        },
+    //        error: function (ex) {
+    //            alert('Lỗi load món: ' + ex);
+    //        }
+    //    });
+
+    //})
+</script>
+

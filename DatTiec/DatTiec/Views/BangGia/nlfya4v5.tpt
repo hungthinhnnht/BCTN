@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+<div class="container">
+    <div class="sk_banner">
+        <img src="/Content/img/skbanner.jpg">
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+           
+            <div class="list_ma">
+                
+                <h2 class="text-center">
+                    <span class="tvtc-tit">
+                        DANH SÁCH LOẠI MÓN
+                    </span>
+                </h2>
+                <div class="row">
+                    @foreach (DatTiec.Models.LoaiMon n in ViewBag.monan)
+                    {
+                        <div class="col-md-4">
+
+                            @*<a href="@Url.Action("LayDanhSachMon", "BangGia", new { id = @n.idloaimon })">@n.Tenloai</a>*@
+                            <div class="loaidv_item">
+                                <a href="/BangGia/LayDanhSachMon/@n.idloaimon">@n.Tenloai</a>
+                                <img src="~/Content/img/tiec2.jpg" />
+                            </div>
+                        </div>
+                    }
+            </div>
+            </div>
+                <div class="instruction">
+                    <p>*Quý khách có thể chọn tự do các món trong menu.</p>
+                </div>
+            
+        </div>
+        <div class="col-md-4">
+            @Html.Action("TinTuc", "DV")
+        </div>
+    </div>
+   
+
+    <div>
+        <div>
+            DANH SÁCH MENU
+            <br />
+
+            @foreach (var item in ViewBag.DSMN)
+            {
+                <div>
+                    <b class="TenMenu" id="@item.Masomenu">@item.Tengoi</b><br />
+
+                    <select class="dsmontungmenu"></select>
+                </div>
+
+            }
+
+            @foreach (var item in ViewBag.dsmontungmenu)
+            {
+                <div>
+                    <b class="TenMenu" id="@item.MaSoMenu">@item.MaSoMenu</b><br />
+
+                    <select class="dsmontungmenu"></select>
+                </div>
+
+            }
+
+
+
+        </div>
+    </div>
+</div>
+@Html.Action("GioHang", "Home")
+

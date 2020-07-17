@@ -1,0 +1,125 @@
+﻿@*MENU*@
+
+  
+<div class="ctn_menu">
+    <div class="container ">
+        <nav class="navbar navbar-expand-md menu_th">
+            <a class="navbar-brand" href="/Home/Index"><img src="~/Content/img/LOGOWEB.jpg" class="img-menu" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i style="font-size:30px" class="fa fa-align-justify"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Home/Index">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/DV/Index">
+                            DỊCH VỤ
+                            <b class="caret"></b>
+                        </a>
+                        @*<ul class="dropdown_menu">
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc cưới
+                                </a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc hỏi
+                                </a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc giỗ
+                                </a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc tại nhà
+                                </a>
+                            </li>
+
+                        </ul>*@
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/BangGia/Index">
+                            MÓN ĂN
+                            <b class="caret"></b>
+                        </a>
+                        @*<ul class="dropdown_menu">
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc cưới
+                                </a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc hỏi
+                                </a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc giỗ
+                                </a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a class="dm_text" href="#">
+                                    Đặt tiệc tại nhà
+                                </a>
+                            </li>
+
+                        </ul>*@
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/LienHe/Index">LIÊN HỆ</a>
+                    </li>
+                   
+                    @if (Session["quyen"] == "khachhang")
+                     {
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Xin chào: @Session["User"]</a>
+                            <ul class="dropdown_menu">
+                                <li class="dropdown_menu-item">
+                                    <a class="dm_text" href="/Home/ThongTinTaiKhoan/@Session["MaKH"]">
+                                        Quản lý tài khoản
+                                    </a>
+                                </li>
+                                <li class="dropdown_menu-item">
+                                    <a class="dm_text" href="~/ThanhToan/Index">
+                                        Giỏ hàng
+                                    </a>
+                                </li>
+                                <li class="dropdown_menu-item">
+                                    <a class="dm_text" href="/Home/DangXuat">
+                                        Đăng xuất
+                                    </a>
+                                </li>
+                               
+
+                            </ul>
+                        </li>
+                     }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/_DangKy">ĐĂNG KÝ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/_DangNhap">ĐĂNG NHẬP</a>
+                        </li>
+                    }
+                  
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+</div>
+
+
+
+
+@*END MENU*@

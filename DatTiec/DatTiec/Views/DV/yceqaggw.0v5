@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+<div class="container">
+    <div class="sk_banner">
+        <img src="/Content/img/skbanner.jpg">
+    </div>
+    <div class="row">
+              
+                  
+                    
+                
+        <div class="col-md-8">
+            
+            <div class="list_dv">
+                <h2 class="text-center">
+                    <span class="tvtc-tit">
+                        DANH SÁCH DỊCH  VỤ
+                    </span>
+                </h2>
+                <div class="row">
+                    @foreach (var dv in ViewBag.LoaiDichVu)
+                    {
+                        <div class="col-md-4">
+                            <div class="loaidv_item">
+                                <a href="/DV/LayDanhSachDichVu/@dv.idloai">@dv.Tenloai</a>
+                                <img src="~/Content/img/tiec1.jpg" />
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+            </div>
+            
+        <div class="col-md-4">
+            @Html.Action("TinTuc", "DV")
+        </div>
+    </div>
+    <div>
+        DANH SÁCH MENU
+        <br />
+     
+        @foreach (var item in ViewBag.DSMN)
+        {
+            <div>
+                <b  class="TenMenu" id="@item.Masomenu">@item.Tengoi</b><br />
+                <select class="dsmontungmenu"></select>
+            </div>
+            
+        }
+      
+        
+    </div>
+</div>
+@Html.Action("GioHang", "Home")
+
+
+
+<script>
+ 
+
+    $(document).ready(function () {
+        var Envie = '';
+        $('.TenMenu').each(function () {
+            alert(Envie)
+            Envie = $(this).attr('id');
+
+            $(function () {
+
+                $.ajax({
+                    url: "DV/LayMonTungMenu", // we are calling json method
+                    data: { Masomenu: mamenu },
+                    success: function (response) {
+                        $(response).each(function (i, e) {
+                            $.ajax({
+                                url: "/DV/LayMonTungMenu", // we are calling json method
+                                data: { Masomenu2: e },
+                                success: function (response) {
+                                    $(response).each(function (i, e) {
+                                        $(".dsmontungmenu").append(
+                                            $('<option/>')
+                                            .attr('value', e.Id)
+                                           .text(e.idmonan)
+                                        );
+                                    });
+                                },
+                                error: function (ex) {
+                                    alert('Lỗi load món ăn: ' + ex);
+                                }
+                            });
+                        });
+                    },
+                    error: function (ex) {
+                        alert('Lỗi load món ăn: ' + ex);
+                    }
+                });
+            });
+
+        })
+      
+    });
+
+    
+</script>

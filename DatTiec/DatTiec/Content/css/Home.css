@@ -1,0 +1,1086 @@
+﻿body {
+    color: black;
+}
+.block-ellips {
+    display: -webkit-box;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 1.25;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+/*MENU*/
+.img-menu {
+    width: 230px;
+    height: 70px;
+    transition:all 0.5s;
+}
+.fix_img {
+    height:50px !important;
+    width:200px !important;
+    transition:all 0.5s;
+}
+.menu_th {
+    padding-top:0;
+    padding-bottom:0;
+}
+.fix_menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 3px 11px 5px rgba(0, 0, 0, 0.05);
+}
+
+.menu_th .navbar-brand {
+    margin-right: 40px !important;
+}
+
+.menu_th .navbar-nav .nav-link {
+    padding: 10px 25px !important;
+    color: #666;
+    font-size: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+.menu_th .navbar-nav .nav-link:hover {
+    border:1px solid #5077e6bf;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.dropdown_menu {
+    position: absolute;
+    min-width: 160px;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+    background-color:#0339d4bf;
+    z-index: 999;
+    display: none;
+    transition: 0.5s;
+}
+
+    .dropdown_menu li {
+        padding: 5px 40px;
+    }
+
+.dm_text {
+    clear: both;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    color:white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.dropdown_menu-item:hover {
+    background-color: #7c9eff;
+}
+
+    .dropdown_menu-item:hover .dm_text {
+        color: white;
+        text-decoration: none;
+    }
+
+.menu_th .nav-item:hover .dropdown_menu {
+    display: block;
+    transition:all 0.5s;
+}
+
+/*END MENU*/
+
+
+
+/*SLIDE HOME*/
+.news_slide img {
+    height: 600px;
+}
+
+.slide_home .owl-nav {
+    left: 0;
+    position: absolute;
+    top: calc(50% - 25px);
+    color: white;
+    font-size: 20px;
+    width: 100%;
+}
+
+.slide_home .owl-prev {
+    float: left;
+    opacity: 0.5;
+    margin-left: 30px !important;
+    position: absolute;
+}
+
+  .slide_home  .owl-prev:hover {
+        opacity: 1;
+    }
+
+.slide_home .owl-next {
+    position: absolute;
+    right: 0;
+    float: right;
+    opacity: 0.5;
+    margin-right: 30px !important;
+}
+
+.slide_home    .owl-next:hover {
+        opacity: 1;
+        -moz-transition: inherit;
+        -o-transition: inherit;
+        -webkit-transition: inherit;
+        transition: inherit 0.5s;
+    }
+
+.slide_home .owl-theme .owl-nav [class*='owl-']:hover {
+   background-color:blue !important;  
+    color: white;
+    text-decoration: none;
+}
+.slide_home .owl-theme .owl-nav [class*='owl+']:hover {
+   background-color:blue !important;  
+    color: white;
+    text-decoration: none;
+}
+
+.slide_home .owl-nav button {
+    height: 50px;
+    width: 50px;
+    background-color: red !important;
+    border-radius: 50px;
+}
+
+.slide_home .owl-nav span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.slide_home .owl-dots {
+    display: none;
+}
+
+
+
+/*DỊCH VỤ*/
+.dichvu {
+    padding:50px 0;
+    background-color:#e4dcdc;
+}
+.dv-tit {
+    color: #bc360a;
+    font-weight: 500;
+    border-bottom:3px solid #bc360a;
+    padding:5px 10px;
+}
+.stage {
+    margin-top:40px;
+}
+.loaidv_item {
+    padding:30px 0;
+width: 100%;
+text-align: center;
+transition: all 0.5s;
+margin: 15px;
+background-position:center center;
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+/*.loaidv_overlay {
+   height:100%;
+   width:100%;
+   position:absolute;
+    background-color: #3108c6;
+    top:0;
+    opacity:0.5;
+}*/
+
+.loaidv_item a {
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:20px;
+    color:#080897;
+    transition:0.5s;
+}
+.loaidv_item a:hover {
+    text-decoration:none !important;
+}
+.loaidv_item img {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:15px;
+    padding:15px;
+    z-index:-9;
+    opacity:0.3;
+}
+.loaidv_item a:hover {
+    font-size:25px;
+    transition:0.5s;
+}
+.dvdv {
+    width:150px;
+    height:150px;
+    margin:0 auto;
+}
+.dv_item {
+    border-radius: 50%;
+    background-color: #B28B00;
+    text-align: center;
+    padding: 10px 0;
+    align-self: flex-end;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: all 0.5s !important;
+}
+.dv_item_cont {
+    margin:0 auto;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:1px solid white;
+    padding:5px;
+}
+.dv_item_cont a:hover {
+    text-decoration:none;
+}
+.dv_item i {
+    font-size:40px;
+    color:white;
+}
+.dv_item p  {
+    color:white;
+    margin:8px 0;
+}
+.dv_item b  {
+    color:white;
+}
+.dv_xct {
+    width:100%;
+    margin-top:15px;
+    border-radius:5px;
+    border: 1px solid #B28B00;
+    background-color: transparent;
+    color:#B28B00;
+    font-weight:bold;
+}
+.dv_xct:hover {
+    background-color:#0c43e0d1;
+    color:white;
+    border-color:#0c43e0d1;
+}
+
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+    transition:0.5s;
+}
+
+@keyframes bounce-1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.ctdv_cont {
+        border: 1px solid #ccc;
+    padding: 20px;
+    height: 100%;
+}
+.ctdv {
+    margin-top:30px;
+}
+/*END DỊCH VỤ*/
+
+/*SU KIEN*/
+.sukien{
+    padding:25px 0;
+}
+.sk_item {
+    margin-top:30px;
+}
+.sk_item1 {
+    position:relative;
+}
+.sk-tit {
+         color: #bc360a;
+    font-weight: 500;
+    border-bottom:3px solid #bc360a;
+    padding:5px 10px;
+}
+.sk_item img {
+    height:270px;
+    width:100%;
+}
+.sk_overlay {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color:#5077e680;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+.sk_item1:hover .sk_overlay{
+    background-color:transparent !important;
+    transition:all 0.3s;
+}
+.sk_cont1 {
+    text-align:center;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+.sk_cont1 span {
+    background-color:#a52c42;
+    font-size:18px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:white;
+    border-radius:25px;
+}
+.sk_cont2 {
+    text-align:center;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+.sk_cont2 span {
+   background-color: rgba(0, 0, 0, 0.35);
+    font-size: 10px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 25px;
+}
+.sk_banner {
+    height:150px;
+    background-color:red;
+}
+.sk_banner img {
+    width:100%;
+    height:100%;
+}
+
+
+/*Ý KIẾN KHÁCH HÀNG*/
+.ykkh {
+    margin:25px 0;
+}
+.ykkh_item  {
+    text-align:center;
+}
+.ykkh_item img {
+    height:100px !important;
+    width:100px !important;
+    border-radius:100px;
+    display:unset !important;
+}
+.ykkh_if1 {
+    color:#a52c42;
+    font-size:19px;
+    font-weight:bold;
+    margin:0;
+}
+.ykkh_if2    {
+       font-size: 14px;
+    color: #444;
+    font-weight:bold;
+}
+.slide_ykkh {
+    margin-top:15px;
+}
+.slide_ykkh .owl-nav {
+    left: 0;
+    position: absolute;
+    top: calc(50% - 25px);
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    display:block !important;
+}
+
+.slide_ykkh .owl-prev {
+    float: left;
+    opacity: 0.5;
+    margin-left: 30px !important;
+    position: absolute;
+}
+
+  .slide_ykkh  .owl-prev:hover {
+        opacity: 1;
+    }
+
+.slide_ykkh .owl-next {
+    position: absolute;
+    right: 0;
+    float: right;
+    opacity: 0.5;
+    margin-right: 30px !important;
+}
+
+.slide_ykkh    .owl-next:hover {
+        opacity: 1;
+        -moz-transition: inherit;
+        -o-transition: inherit;
+        -webkit-transition: inherit;
+        transition: inherit 0.5s;
+    }
+
+.slide_ykkh .owl-theme .owl-nav [class*='owl-']:hover {
+   background-color:blue !important;  
+    color: white;
+    text-decoration: none;
+}
+.slide_ykkh .owl-theme .owl-nav [class*='owl+']:hover {
+   background-color:blue !important;  
+    color: white;
+    text-decoration: none;
+}
+
+.slide_ykkh .owl-nav button {
+    height: 50px;
+    width: 50px;
+    background-color: #a52c42 !important;
+    border-radius: 50px;
+}
+
+.slide_ykkh .owl-nav span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.slide_ykkh .owl-dots {
+    display: none;
+}
+/*Ý KIẾN KHÁCH HÀNG ITEM*/
+
+
+
+
+/*ĐẶT TIỆC NHANH*/
+.dtn {
+    background-position:center center !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+    
+}
+.dtn_overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color:#5077e6bf;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+.dtn-tit {
+         color: #bc360a;
+    font-weight: 500;
+    border-bottom:3px solid #bc360a;
+    padding:5px 10px;
+}
+.form_dtn {
+    padding: 30px;
+}
+.dtn_form {
+    background: #fff;
+    border-radius: 5px;
+     padding: 30px;
+}
+.dtn_form label {
+    color: #555;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.dtn_form input {
+   display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.dtn_form textarea {
+        display: block;
+    width: 100%;
+    height: 180px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.btn_datngay {
+    margin-top:15px;
+}
+/*END ĐẶT TIỆC NHANH*/
+
+
+
+/*FOOTER*/
+
+.bg-footer {
+    background-color: #333;
+    padding: 20px 0 30px;
+}
+.footer-heading {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.footer-link a {
+    color: #acacac;
+    line-height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    text-decoration:none;
+}
+.footer-link li a i {
+    color:white !important;
+}
+.footer-link a:hover {
+    color: #1bbc9b;
+}
+
+.contact-info {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.footer-social-icon {
+    font-size: 15px;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+}
+.lienhe-zalo {
+    background-color:#4387ef;
+    padding:5px 0;
+    margin-bottom:15px;
+}
+.lienhe-fb {
+    background-color:#0b52bd;
+    padding:5px 0;
+     margin-bottom:15px;
+}
+.lienhe-yt {
+       background-color:#ff001e;
+    padding:5px 0;
+     margin-bottom:15px;
+}
+.lienhe-logo {
+    line-height:normal;
+    margin:0;
+    color:white;
+    font-family: "Segoe UI",Arial,sans-serif;
+    align-items:center;
+    text-align:center;
+    font-weight:600;
+}
+.lienhe-slogan p {
+    line-height:normal;
+    margin:0;
+    color:white;
+    font-family: "Segoe UI",Arial,sans-serif;
+    align-items:center;
+    text-align:center;
+}
+.lienhe-slogan {
+    text-align:center;
+}
+.footer-alt {
+    color: #acacac;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading:after {
+    content: '';
+    width: 25px;
+    border-bottom: 1px solid #FFF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid #1bbc9b;
+}
+.tag-item {
+    color:#999999 !important;
+    background: rgba(255, 255, 255, 0.1);
+    padding:5px 12px;
+    margin-bottom:3px;
+    display:inline-block;
+}
+/*END FOOTER*/
+
+
+
+
+
+/*VIEW DICH VU*/
+.list_dv {
+    margin-top:15px;
+   transition:display 1s;;
+}
+.list_dvtiec {
+    margin-top:15px;
+}
+.dvtiec_item {
+ padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: dashed 1px #ccc;
+    /*box-shadow: 10px -1px 5px -10px rgba(0,0,0,0.75);*/
+}
+.tiec_img {
+    width:100%;
+    height:150px;
+}
+.tiec_img img {
+    width:100%;
+    height:100%;
+}
+.tiec_link {
+    font-weight:bold;
+    font-size:20px;
+     text-transform:uppercase;
+}
+.tiec_link:hover {
+    text-decoration:none;
+}
+.tiec_xct:hover {
+    text-decoration:none;
+}
+.tvtc-tit {
+    color: #bc360a;
+    font-weight: 500;
+    border-bottom: 3px solid #bc360a;
+    padding: 5px 10px;
+    font-size:22px;
+}
+.tiecvuatochuc {
+    margin-top:15px;
+}
+.tt-item {
+   border-bottom: 1px dashed #ccc;
+    margin-top: 15px;
+}
+.tt-item a {
+    text-decoration:none;
+}
+.tt-item:hover .tt-item-tit p {
+    color:red;
+}
+.tt-item-img {
+    height:100%;
+}
+.tt-item-img img {
+    width:100%;
+    height:100px;   
+    border:1px solid #ccc;     
+}
+.tt-item-tit p {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight:bold;
+    margin:0;
+    font-size:14px;
+}
+.tt-item-cont p {
+    margin:0;
+    display: -webkit-box;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 15px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tt-item-time {
+    color:#867878;
+     font-family: "Segoe UI",Arial,sans-serif;
+     padding:5px;         
+}
+.tt-item-time i:first-child {
+    float:left;
+    padding:5px 0;
+    font-size:13px;
+}
+.tt-item-time i:last-child {
+     padding:5px 10px;
+    font-size:13px;
+}
+.ctdv_des {
+    margin-top:10px;
+}
+.ctdv_btndat {
+    margin-top:10px;
+}
+/*END VIEW DICH VU*/
+
+/*CHI TIẾT TIỆC*/
+.monan_img {
+    width:60px;
+    height:60px;
+    margin:5px;
+}
+.monan_gia {
+    display:flex;
+}
+.monan_name {
+    font-size:18px;
+    font-weight:bold;
+}
+.monan_group {
+    background-color:silver;
+       border: 1px solid #0339d4bf;
+}
+.monan_gia span{
+    padding:2px;
+}
+.monan_table {
+    width:100%;
+     
+}
+.monan_head {
+    background-color:#0339d4bf;
+    color:white;
+    padding:20px;
+    font-size:18px;
+}
+.monan_item {
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.monan_head1 {
+  border: 2px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 35px;
+} 
+.monan_head2 {
+    text-align:right;
+    float:right;
+    border-radius:10px;
+    border:2px solid white;
+    padding:5px;
+} 
+/*END CHI TIẾT TIỆC*/
+
+
+/*LIÊN HỆ*/
+
+ .lienhe-tit h2 {
+        font-family: 'Cabin', sans-serif;
+        font-weight: 500;
+        color: #0339d4bf;
+        padding-top:15px;
+        font-size: 42px;
+        margin: 0;
+    }
+
+    .lienhe-line {
+        width: 80px;
+        height: 2px;
+        background-color: #fb397d;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .lienhe-thongtin p, .lienhe-thongtin a {
+        font-family: 'Cabin', sans-serif;
+        color: #726a84;
+        font-size: 16px;
+        margin-bottom: 5px;
+        text-decoration:none;
+    }
+
+    .lienhe-thongtin span {
+        color: #5b32b4;
+    }
+
+    #txtName, #txtEmail, #txtPhone {
+        font-size: 18px;
+        padding: 30px 15px;
+        border-radius: 25px 25px 25px 0;
+        line-height: 1.5;
+        border: 1px solid #ced4da;
+        margin-bottom:20px;
+    }
+
+    #txtContent {
+        border-radius: 25px 25px 25px 0;
+        width: 100%;
+        padding-left: 15px;
+        height: 110px;
+        resize:none;
+    }
+    #btnSendEmail {
+        background: #0339d4bf;
+        height: 48px;
+        min-width: 185px;
+        color: #ffffff;
+        font-weight: 500;
+        border-radius: 22px 25px 22px 0;
+    }
+    .bg-breadcrumb {
+        background-color: #e9ecef;
+    }
+     .breadcrumb-contact {
+         padding:0.25rem 1rem;
+    }
+/*END LIÊN HỆ*/
+
+
+/*TU VAN*/
+.tuvan {
+      margin-top:15px;
+}
+.tv-item {
+   border-bottom: 1px dashed #ccc;
+    margin-top: 15px;
+   
+}
+.tv-item a {
+    text-decoration:none;
+}
+.tv-item:hover .tv-item-tit p {
+    color:red;
+}
+.tv-item-img {
+    height:100%;
+}
+.tv-item-img img {
+    width:100%;
+    height:150px;   
+    border:1px solid #ccc;     
+}
+.tv-item-tit p {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight:bold;
+    margin:0;
+    font-size:20px;
+}
+.tv-item-cont p {
+    margin:0;
+    display: -webkit-box;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 15px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:#625656;
+}
+.tv-item-time {
+    color:#867878;
+     font-family: "Segoe UI",Arial,sans-serif;
+     padding:5px;         
+}
+.tv-item-time i:first-child {
+    float:left;
+    padding:5px 0;
+}
+.tv-item-time i:last-child {
+     padding:5px 10px;
+}
+/*END TU VAN*/
+
+
+
+/*DANG KY*/
+.input-group {
+    margin:15px 0;
+}
+.input-group span {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+/*END DANG KY*/
+
+/*CAPCHA*/
+.capcha {
+    display: flex;
+}
+
+#CaptchaDiv {
+    font: bold 17px verdana, arial, sans-serif;
+    font-style: italic;
+    color: #000000;
+    background-color: #e86b6b;
+    margin-left: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 0 30px;
+}
+
+
+#tbCapcha {
+    color: red;
+    font-weight: bold;
+    display: none;
+    margin-top: 15px;
+}
+/*END CAPCHA*/
+
+/*THÔNG TIN TÀI KHOẢN*/
+.tttk {
+    background-color:#5077e680;
+    text-align:center;
+    padding:20px 0; 
+}
+.tttk_ul {
+        padding: 0;
+    width: 100%;
+    list-style: none;
+    
+}
+.tttk_ul li{
+    padding:5px 10px;
+    font-size:18px;
+    text-align:center;
+}
+.tttk_ul li i {
+    font-size:20px;
+    color:blue;
+}
+.tttk_ul li span {
+    font-size:25px;
+}
+/*END THÔNG TIN TÀI KHOẢN*/
+
+
+
+
+
+.list_ma {
+    margin-top:15px;
+    transition:display 1s;
+}
+
+
+
+
+
+/*GIỎ HÀNG*/
+.giohang_tit span{
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.giohang_tit {
+    text-align:center;
+    border-bottom:1px solid #ccc;
+    padding-bottom:15px;
+}
+
+  /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+            /* Full-width input fields */
+            .form-container input[type=text], .form-container input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+
+                /* When the inputs get focus, do something */
+                .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: red;
+            }
+
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
+.img_giohang img {
+    width:100%;
+    height:50px;
+}
+.giohang_item {
+    padding:10px 0;
+}
+
+
+/*END GIỎ HÀNG*/

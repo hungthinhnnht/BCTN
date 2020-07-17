@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CTDatTiec">
+    <Key>
+      <PropertyRef Name="idct" />
+    </Key>
+    <Property Name="idct" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="iddattiec" Type="varchar" MaxLength="10" />
+    <Property Name="idmonan" Type="varchar" MaxLength="10" />
+    <Property Name="iddichvu" Type="varchar" MaxLength="10" />
+    <Property Name="Soluong" Type="nvarchar" MaxLength="200" />
+    <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CTDichvu">
+    <Key>
+      <PropertyRef Name="idChiTiet" />
+    </Key>
+    <Property Name="idChiTiet" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="iddichvu" Type="varchar" MaxLength="10" />
+    <Property Name="Hinhanh" Type="nvarchar" MaxLength="250" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="Gia" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CTMenu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Masomenu" Type="nvarchar" MaxLength="10" />
+    <Property Name="idmonan" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DatTiec">
+    <Key>
+      <PropertyRef Name="iddattiec" />
+    </Key>
+    <Property Name="iddattiec" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hoten" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ngaydat" Type="date" />
+    <Property Name="Ngaydai" Type="date" />
+    <Property Name="Diachi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Dienthoai" Type="nvarchar" MaxLength="250" />
+    <Property Name="Tongsotien" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Trangthai" Type="nvarchar" MaxLength="250" />
+    <Property Name="Soluongban" Type="int" />
+    <Property Name="Masomenu" Type="varchar" MaxLength="10" />
+    <Property Name="Ghichu" Type="nvarchar(max)" />
+    <Property Name="Giamenu" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Tendangnhap" Type="varchar" MaxLength="200" />
+    <Property Name="TGD" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaKH" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Dichvu">
+    <Key>
+      <PropertyRef Name="iddichvu" />
+    </Key>
+    <Property Name="iddichvu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tendichvu" Type="nvarchar" MaxLength="200" />
+    <Property Name="idloai" Type="varchar" MaxLength="10" />
+    <Property Name="Hinhanh" Type="nvarchar" MaxLength="250" />
+    <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Mota" Type="nvarchar(max)" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="BatBuoc" Type="bit" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hoten" Type="nvarchar" MaxLength="250" />
+    <Property Name="Tendangnhap" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="50" />
+    <Property Name="Diachi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Dienthoai" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="loaiDichVu">
+    <Key>
+      <PropertyRef Name="idloai" />
+    </Key>
+    <Property Name="idloai" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenloai" Type="nvarchar" MaxLength="200" />
+    <Property Name="TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="LoaiMon">
+    <Key>
+      <PropertyRef Name="idloaimon" />
+    </Key>
+    <Property Name="idloaimon" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenloai" Type="nvarchar" MaxLength="250" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="250" />
+    <Property Name="Trangthai" Type="bit" />
+  </EntityType>
+  <EntityType Name="Menusan">
+    <Key>
+      <PropertyRef Name="Masomenu" />
+    </Key>
+    <Property Name="Masomenu" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tengoi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Trangthai" Type="bit" />
+  </EntityType>
+  <EntityType Name="MonAn">
+    <Key>
+      <PropertyRef Name="idmonan" />
+    </Key>
+    <Property Name="idmonan" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idloaimon" Type="varchar" MaxLength="10" />
+    <Property Name="Tenmon" Type="nvarchar" MaxLength="250" />
+    <Property Name="Hinhanh" Type="nvarchar" MaxLength="250" />
+    <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Mota" Type="nvarchar(max)" />
+    <Property Name="Trangthai" Type="bit" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="Tendn" />
+    </Key>
+    <Property Name="Tendn" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Matkhau" Type="varchar" MaxLength="50" />
+    <Property Name="Hoten" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="Quyen" Type="bit" />
+  </EntityType>
+  <EntityType Name="QuangCao">
+    <Key>
+      <PropertyRef Name="idqc" />
+    </Key>
+    <Property Name="idqc" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tenqc" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ngaybatdau" Type="datetime" />
+    <Property Name="Ngayketthuc" Type="datetime" />
+    <Property Name="Hinh" Type="nvarchar" MaxLength="250" />
+    <Property Name="Link" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TinTuc">
+    <Key>
+      <PropertyRef Name="idtin" />
+    </Key>
+    <Property Name="idtin" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tieude" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ngaydang" Type="datetime" />
+    <Property Name="Noidung" Type="nvarchar(max)" />
+    <Property Name="Hinh" Type="nvarchar" MaxLength="250" />
+    <Property Name="Trangthai" Type="bit" />
+    <Property Name="Tomtat" Type="nvarchar" MaxLength="600" />
+  </EntityType>
+  <Association Name="FK_CTDatTiec_DatTiec">
+    <End Role="DatTiec" Type="Self.DatTiec" Multiplicity="0..1" />
+    <End Role="CTDatTiec" Type="Self.CTDatTiec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatTiec">
+        <PropertyRef Name="iddattiec" />
+      </Principal>
+      <Dependent Role="CTDatTiec">
+        <PropertyRef Name="iddattiec" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTDichvu_Dichvu">
+    <End Role="Dichvu" Type="Self.Dichvu" Multiplicity="0..1" />
+    <End Role="CTDichvu" Type="Self.CTDichvu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dichvu">
+        <PropertyRef Name="iddichvu" />
+      </Principal>
+      <Dependent Role="CTDichvu">
+        <PropertyRef Name="iddichvu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTMenu_Menusan">
+    <End Role="Menusan" Type="Self.Menusan" Multiplicity="0..1" />
+    <End Role="CTMenu" Type="Self.CTMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menusan">
+        <PropertyRef Name="Masomenu" />
+      </Principal>
+      <Dependent Role="CTMenu">
+        <PropertyRef Name="Masomenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dichvu_loaiDichVu">
+    <End Role="loaiDichVu" Type="Self.loaiDichVu" Multiplicity="0..1" />
+    <End Role="Dichvu" Type="Self.Dichvu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaiDichVu">
+        <PropertyRef Name="idloai" />
+      </Principal>
+      <Dependent Role="Dichvu">
+        <PropertyRef Name="idloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MonAn_LoaiMon">
+    <End Role="LoaiMon" Type="Self.LoaiMon" Multiplicity="0..1" />
+    <End Role="MonAn" Type="Self.MonAn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiMon">
+        <PropertyRef Name="idloaimon" />
+      </Principal>
+      <Dependent Role="MonAn">
+        <PropertyRef Name="idloaimon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CTDatTiec" EntityType="Self.CTDatTiec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTDichvu" EntityType="Self.CTDichvu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTMenu" EntityType="Self.CTMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatTiec" EntityType="Self.DatTiec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dichvu" EntityType="Self.Dichvu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="loaiDichVu" EntityType="Self.loaiDichVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiMon" EntityType="Self.LoaiMon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menusan" EntityType="Self.Menusan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonAn" EntityType="Self.MonAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NguoiDung" EntityType="Self.NguoiDung" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuangCao" EntityType="Self.QuangCao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinTuc" EntityType="Self.TinTuc" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CTDatTiec_DatTiec" Association="Self.FK_CTDatTiec_DatTiec">
+      <End Role="DatTiec" EntitySet="DatTiec" />
+      <End Role="CTDatTiec" EntitySet="CTDatTiec" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTDichvu_Dichvu" Association="Self.FK_CTDichvu_Dichvu">
+      <End Role="Dichvu" EntitySet="Dichvu" />
+      <End Role="CTDichvu" EntitySet="CTDichvu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTMenu_Menusan" Association="Self.FK_CTMenu_Menusan">
+      <End Role="Menusan" EntitySet="Menusan" />
+      <End Role="CTMenu" EntitySet="CTMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dichvu_loaiDichVu" Association="Self.FK_Dichvu_loaiDichVu">
+      <End Role="loaiDichVu" EntitySet="loaiDichVu" />
+      <End Role="Dichvu" EntitySet="Dichvu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MonAn_LoaiMon" Association="Self.FK_MonAn_LoaiMon">
+      <End Role="LoaiMon" EntitySet="LoaiMon" />
+      <End Role="MonAn" EntitySet="MonAn" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

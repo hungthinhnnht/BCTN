@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form id="form1" runat="server">
+
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+
+    <table align="center" class="auto-style1">
+        <tr>
+            <td height="100" style="background-color: #00FFFF">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="background-color: #FFCCCC"><a href="Trangchu.aspx">Trang chu</a> <a href="LoaiDV.aspx">LoaiDV</a> <a href="Dichvu.aspx">Dichvu</a> <a href="CTDV.aspx">CTDV</a> <a href="LoaiMon.aspx">LoaiMon</a> <a href="MonAn.aspx">MonAn</a> <a href="TinTuc.aspx">TinTuc</a> <a href="QuangCao.aspx">QuangCao</a> <a href="DatTiec.aspx">DatTiec</a> <a href="MenuSan.aspx">Menu</a> <a href="User.aspx">User</a></td>
+        </tr>
+        <tr>
+            <td aria-invalid="false">
+                Xin Chào<asp:Label ID="lbHoTen" runat="server"></asp:Label>
+&nbsp;<asp:LinkButton ID="btnThoat" runat="server" OnClick="btnThoat_Click">Thoát</asp:LinkButton>
+&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #3366FF">&nbsp;</td>
+        </tr>
+    </table>
+    
+
+    </form>
+    
+
+</body>
+</html>

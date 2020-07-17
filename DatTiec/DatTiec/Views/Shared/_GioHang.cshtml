@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "_GioHang";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<style>
+    #myForm {
+        display:block;
+    }
+
+    .list_giohang::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 8px;
+        background-color: #F5F5F5;
+    }
+
+    .list_giohang::-webkit-scrollbar {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+
+    .list_giohang::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #D62929;
+    }
+
+</style>
+@if (Session["quyen"] == "khachhang")
+{
+    <button class="open-button" onclick="openForm()"><i class="fa fa-shopping-bag"></i> Giỏ hàng</button>
+
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <div class="giohang_tit">
+                <span> Giỏ hàng</span>
+            </div>
+
+            @*}
+                @foreach (DatTiec.Models.DatSanh th in Model)
+                                {*@
+            <div class="list_giohang" style="height:350px;overflow-y:scroll;overflow-x:hidden;">
+                @foreach (var item in ViewBag.abc)
+                {
+
+
+                    <div class="giohang_item">
+
+                        <div class="row">
+                            <div class="col-md-3" style="margin:auto">
+                                <div class="img_giohang">
+                                    <img src="~/Content/img_dv/@item.Hinhanh" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6" style="margin:auto;font-size:14px">
+                                <div class="giohang_ten">
+                                    <b>@item.Tendichvu</b>
+                                </div>
+                                <div>
+                                    <b style="display:none">@item.ThanhTien</b>
+                                </div>
+                                <div class="giohang_time">
+                                    <b>@Html.FormatValue(item.NgayToChuc, "{0:dd/MM/yyyy}")  (@item.ThoiGianToChuc)</b>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3" style="margin:auto">
+                                <div>
+                                    <a style="text-decoration:none;padding:5px;" href="/Home/XoaDatSanh/@item.IdDatSanh" class=" btn-danger">@*<i class="fa fa-trash"></i>*@ Xóa</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+             
+
+                @foreach (var item in ViewBag.dsdatmon)
+                {
+
+
+                    <div class="giohang_item">
+
+                        <div class="row">
+                            <div class="col-md-3" style="margin:auto">
+                                <div class="img_giohang">
+                                    <img src="~/Content/img_ma/@item.Hinhanh" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6" style="margin:auto;font-size:14px">
+                                <div class="giohang_ten">
+                                    <b>@item.Tenmon</b>
+                                </div>
+                                <div>
+                                    <b style="display:none">@item.ThanhTien</b>
+                                </div>
+                                <div class="giohang_time">
+                                    <b>@Html.FormatValue(item.NgayToChuc, "{0:dd/MM/yyyy}")  (@item.ThoiGianToChuc)</b>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3" style="margin:auto">
+                                <div>
+                                    <a style="text-decoration:none;padding:5px;" href="/Home/XoaDatMon/@item.IdDatMon" class=" btn-danger">@*<i class="fa fa-trash"></i>*@ Xóa</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <a href="~/ThanhToan/Index" style="width:100%" class="btn btn-primary">Thanh Tóan</a>
+            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </div>
+   
+        </div>
+}
+
+
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+</script>

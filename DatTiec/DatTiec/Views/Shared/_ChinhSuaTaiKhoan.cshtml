@@ -1,0 +1,85 @@
+﻿@model DatTiec.Models.KhachHang
+@{
+    ViewBag.Title = "_ChinhSuaTaiKhoan";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="row " style="padding-bottom:20px">
+    <div class="col-xs-12 col-sm-6 mx-auto">
+        <form class="omb_loginForm"  action="" autocomplete="off" method="post">
+            @using (Html.BeginForm("CapNhatThongTinTaiKhoan", "Home", FormMethod.Get, new { enctype = "multipart/form-data" }))
+            {
+                <div class="input-group">
+                     
+                        @*<input disabled type="text" value="@Model.MaKH" class="form-control" name="Tendangnhap" placeholder="Tên tài khỏan" required>*@
+                    @Html.HiddenFor(m => m.MaKH)
+                    @Html.HiddenFor(m => m.Tendangnhap)
+                 </div>
+
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="margin:0">Họ Tên</span>
+                        </div>
+                        <input name="Hoten" value="@Model.Hoten" type="text" class="form-control" required />
+                    </div>
+
+                <span class="help-block"></span>
+
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="margin:0">Email</span>
+                        </div>
+                    <input name="Email" value="@Model.Email" type="text" class="form-control" required />
+                    </div>
+
+               <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="margin:0">Địa chỉ</span>
+                        </div>
+                   <input name="Diachi" value="@Model.Diachi" type="text" class="form-control" required />
+                    </div>
+                
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="margin:0">Số điện thoại</span>
+                        </div>
+                    <input name="Dienthoai" value="@Model.Dienthoai" type="text" class="form-control" required />
+                    </div>
+                
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="margin:0">Mật khẩu</span>
+                        </div>
+                    <input name="MatKhau" value="@Model.MatKhau" type="password" class="form-control" required />
+                    </div>
+
+
+                
+
+                @*<div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password" value="@Model.MatKhau" class="form-control" name="MatKhau2" placeholder="Nhập lại mật khẩu" required>
+                </div>*@
+                      
+                  
+                <span class="help-block" style="font-family:monospace">@Html.ValidationSummary(false, "", new { @class = "text-danger" })</span>
+                <button type="submit" id="btnLuu" class="btn icon-btn btn-success"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>LƯU TÀI KHOẢN</button>
+                            <script>
+                                $(function () {
+                                    $("#btnLuu").click(function () {
+                                        this.form.action = "/Home/UpdateCanFile";
+                                    });
+                                });
+                            </script>
+
+            }
+        </form>
+    </div>
+</div>
+<script>
+ 
+   
+</script>
+

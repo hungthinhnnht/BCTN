@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="tuvan">
+                <h2 class="text-center">
+                    <span class="tvtc-tit">
+                        TƯ VẤN
+                    </span>
+                </h2>
+@foreach (var tt in ViewBag.Tintuc)
+{
+        <div class="tv-item">
+                    <a href="#">
+                        <div class="row">
+
+                            <div class="col-md-4 col-6 pr-0">
+                                <div class="tv-item-img">
+                                    <img src="~/Content/img_tt/@tt.Hinh" />
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-6">
+                                <div class="tv-item-tit">
+                                    <p>@tt.Tieude</p>
+                                </div>
+                                <div class="tv-item-cont">
+                                    <p>
+                                        @tt.Tomtat
+                                    </p>
+                                </div>
+                                <div class="tv-item-time">
+                                    <i class="fa fa-calendar"> @tt.Ngaydang</i>
+                                    <i class="fa fa-eye">10998</i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+}
+            
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            @Html.Action("TiecVuaToChuc", "DV")
+        </div>
+    </div>
+</div>
+
+@Html.Action("GioHang", "Home")

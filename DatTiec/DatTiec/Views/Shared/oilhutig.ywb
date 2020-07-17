@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "_ThongTinTaiKhoan";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <div class="tttk">
+               @using (Html.BeginForm("UpdateCanFile", "Account", FormMethod.Get, new { enctype = "multipart/form-data" }))
+{
+                        <ul class="tttk_ul">
+                    <li>
+                       
+                        <span>
+                            <i class="fa fa-address-book"></i>
+                            @th.Hoten
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-location-arrow"></i>
+                        </span>
+                        Địa Chỉ: @th.Diachi
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        Số điện thoại: @th.Dienthoai
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        Email: @th.Email
+                    </li>
+                 
+                </ul>
+               
+                <a href="/Home/ChinhSuaTaiKhoan/@th.MaKH" class="btn btn-success">
+                    <i class="fa fa-edit"> Chỉnh sửa thông tin tài khoản</i>
+                </a>    
+                }           
+            </div>
+        </div>
+    </div>
+</div>

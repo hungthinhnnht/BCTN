@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <h2>DANH SÁCH GIỎ HÀNG CỦA BẠN</h2>
+    <p>Nhấn vào "Thanh toán" để xác nhận</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Hình ảnh    </th>
+                <th>Tên Dịch vụ/ Món ăn - Thời gian đặt </th>
+                <th>Thành tiền</th>\
+
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.abc)
+            {
+                <tr>
+                    <td style="width:25%">
+                        <div class="img_giohang">
+                            <img style="height:125px" src="~/Content/img_dv/@item.Hinhanh" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="giohang_ten">
+                            <b>@item.Tendichvu</b>
+                        </div>
+                        <div class="giohang_time">
+                            <b>@Html.FormatValue(item.NgayToChuc, "{0:dd/MM/yyyy}")  (@item.ThoiGianToChuc)</b>
+
+                        </div>
+                    </td>
+                    <td>
+                        <b class="price">@item.ThanhTien VNĐ</b>
+                    </td>
+                    <td>
+                        <div>
+                            <a style="text-decoration:none;padding:5px;" href="/ThanhToan/XoaDatSanh/@item.IdDatSanh" class=" btn-danger">@*<i class="fa fa-trash"></i>*@ Xóa</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+                @foreach (var item in ViewBag.dsdatmon)
+                {
+                    <tr>
+                        <td style="width:25%">
+                            <div class="img_giohang">
+                                <img style="height:125px" src="~/Content/img_ma/@item.Hinhanh" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="giohang_ten">
+                                <b>@item.Tenmon</b>
+                            </div>
+                            <div class="giohang_time">
+                                <b>@Html.FormatValue(item.NgayToChuc, "{0:dd/MM/yyyy}")  (@item.ThoiGianToChuc)</b>
+
+                            </div>
+                        </td>
+                        <td>
+                            <b class="price">@item.ThanhTien VNĐ</b>
+                        </td>
+                        <td>
+                            <div>
+                                <a style="text-decoration:none;padding:5px;" href="/ThanhToan/XoaDatMon/@item.IdDatMon" class=" btn-danger">@*<i class="fa fa-trash"></i>*@ Xóa</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <h3>Số tiền bạn cần phải thanh toán là: <span style="background-color:green;color:white;padding:5px" class="totalprice"></span><span> VNĐ</span></h3>
+        <a href ="/ThongTinThanhToan/Index" class="btn btn-primary"><i class="fa fa-id-card"></i>  THANH TOÁN NGAY</a>
+</div>
+</div>
+
+
+
+    <div class="giohang_item">
+
+        <div class="row">
+            <div class="col-md-3" style="margin:auto">
+              
+
+            </div>
+            <div class="col-md-6" style="margin:auto;font-size:14px">
+               
+            </div>
+            <div class="col-md-3" style="margin:auto">
+               
+
+            </div>
+        </div>
+    </div>
+
+<script>
+    function format_curency(a) {
+        a.value = a.value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    }
+    var sum = 0;
+    $('.price').each(function () {
+        sum += parseFloat($(this).text());  // Or this.innerHTML, this.innerText
+    });
+    sum2 = sum.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+    $('.totalprice').html(sum2);
+</script>

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatTiec", "DatTiec\DatTiec.csproj", "{3927D721-A447-40D4-A717-B93262428B43}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "webdactiec(1)", "http://localhost:52912", "{8E9D8E35-9FA9-4E6F-9B0C-F476E684490B}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52912"
+		Debug.AspNetCompiler.PhysicalPath = "..\webdactiec\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52912\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52912"
+		Release.AspNetCompiler.PhysicalPath = "..\webdactiec\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52912\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\webdactiec\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3927D721-A447-40D4-A717-B93262428B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3927D721-A447-40D4-A717-B93262428B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3927D721-A447-40D4-A717-B93262428B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3927D721-A447-40D4-A717-B93262428B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E9D8E35-9FA9-4E6F-9B0C-F476E684490B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E9D8E35-9FA9-4E6F-9B0C-F476E684490B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E9D8E35-9FA9-4E6F-9B0C-F476E684490B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E9D8E35-9FA9-4E6F-9B0C-F476E684490B}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

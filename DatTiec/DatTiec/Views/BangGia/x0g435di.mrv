@@ -1,0 +1,273 @@
+﻿@model IEnumerable<DatTiec.Models.MonAn>
+@{
+    ViewBag.Title = "_DanhSachMonAn";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<div class="container">
+    @if (Session["tinhtrangdatmon"] == "datthatbai")
+    {
+        <h2 style="text-align: center; background-color: red; color: white;">SẢNH BẠN VỪA ĐẶT ĐÃ ĐƯỢC ĐẶT VÀO THỜI GIAN ĐÓ. VUI LÒNG CHỌN THỜI GIAN KHÁC HOẶC SẢNH KHÁC</h2>
+    }
+    else
+    {
+        if (Session["tinhtrangdatmon"] == "datthanhcong")
+        {
+            <h2 style="text-align: center; background-color: blue; color: white;">ĐẶT THÀNH CÔNG</h2>
+        }
+    }
+    <div class="list_monan">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="row">
+
+                    <div class="col-md-8 mx-auto monan_item">
+                        <h2 class="text-center">
+                            <span class="tvtc-tit">
+                                DANH SÁCH MÓN
+                            </span>
+                        </h2>
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="monan_group">
+                                    <div class="monan_head">
+                                        @foreach (DatTiec.Models.LoaiMon item in ViewBag.abc)
+                                        {
+                                            <a href="./ChiTietMonAn" class="monan_head1">@item.Tenloai</a>
+                                        }
+
+                                        @*<span class="monan_head2"><span>1.500.000</span></span>*@
+                                    </div>
+                                    @foreach (DatTiec.Models.MonAn th in Model)
+                                    {
+                                        <table class="monan_table">
+
+                                            <tbody>
+
+                                                <tr class="menu-meal">
+                                                    <td style="width:25%">
+                                                        <img class="monan_img" src="~/Content/img_ma/@th.Hinhanh">
+                                                    </td>
+                                                    <td style="width:40%">
+                                                        <a href="/BangGia/LayChiTietMon/@th.idmonan" class="monan_name">@th.Tenmon</a>
+                                                    </td>
+                                                    <td style="width:35%">
+                                                        <div class="monan_gia">
+                                                            <span>@th.Gia VNĐ</span>
+                                                            <span>
+                                                                <input @*onclick="luumon(this)"*@ data-id="1" name="idMon[]" data-name="súp hải sản hột gà" class="monan_check" type="checkbox" value="@th.idmonan">
+                                                            </span>
+                                                         
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                    }
+                                    <div>
+                                      
+                                        <div class="container">
+                                            <div class="modal fade" id="myModal" role="dialog">
+                                                <div class="modal-dialog">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h2>THÔNG TIN ĐẶT HÀNG</h2>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form method="post">
+                                                                @using (Html.BeginForm("DatMon", "BangGia", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                                                    {
+                                                                        foreach (DatTiec.Models.MonAn th2 in Model)
+                                                                        {
+                                                                            <input name="LoaiMonAn" hidden value="@th2.idloaimon" />
+                                                                        }
+
+                                                                    <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" style="margin:0">Ngày tổ chức</span>
+                                                                        </div>
+                                                                        <input name="NgayToChuc" type="date" class="form-control" required />
+                                                                    </div>
+                                                                    <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" style="margin:0">Thời gian tổ chức:</span>
+                                                                        </div>
+                                                                        <select name="ThoiGianToChuc">
+                                                                            <option value="Trua">Trưa</option>
+                                                                            <option value="Chieu">Chiều</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" style="margin:0">Địa chỉ</span>
+                                                                        </div>
+                                                                        <input name="DiaChi" type="text" class="form-control">
+                                                                    </div>
+                                                                    <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" style="margin:0">Yêu cầu khác/ Ghi chú</span>
+                                                                        </div>
+                                                                        <input name="GhiChu" type="text" class="form-control">
+                                                                    </div>
+                                                                    if (Session["MaKH"] != null)
+                                                                    {
+                                                                        <input hidden name="MaKH" value="@Session["MaKH"].ToString()" />
+
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <input hidden />
+                                                                    }
+                                                                    <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" style="margin:0">Số lượng</span>
+                                                                        </div>
+                                                                        <input name="SoLuong" type="number" class="form-control" required>
+                                                                    </div>
+                                                                    <input name="chuoian" hidden type="text" id="chuoian" />
+                                                                    <div class="text-center">
+                                                                        <button data-action="DatMon" class="btn btn-primary "><i class="fa fa-share-square"></i>  Đặt ngay</button>
+                                                                    </div>
+                                                                }
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-fast-backward"></i>  Thoát</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="text-center" style="width:100%;padding:5px"> 
+                                            @if (Session["quyen"] == "khachhang")
+                                            {
+                                                 <button data-toggle="modal" data-target="#myModal" class="btn btn-danger">Đặt Món</button>
+                                            }
+                                            @if (Session["quyen"] == null)
+                                            {
+                                               <a href="/Home/_DangNhap">ĐĂNG KÝ ĐỂ ĐẶT MÓN  ĂN</a>
+                                            }
+                                           
+                                        </div>
+                                      
+                                    </div>
+
+                                    
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                @Html.Action("TinTuc", "DV")
+            </div>
+        </div>
+        
+        <div class="instruction">
+            <p>*Quý khách có thể chọn tự do các món trong menu.</p>
+        </div>
+    </div>
+</div>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function luumon(abc) {
+      
+
+        if (abc.checked === true) {
+            var idmon = abc.id;
+            $.ajax({
+                url: "/BangGia/LuuDatMon", // we are calling json method
+                data: { idmonan: idmon },
+                success: function (response) {
+                    $(response).each(function (i, e) {
+                        $("#DsMonChon").append(
+                        $('<input disabled/>')
+                        .attr('value', 'p' + e.idmonan)
+                            .attr('id', 'p' + e.idmonan)
+                        .attr('class','mon')
+                        .text(e.Tenmon)
+                        
+                    );
+                    });
+                  
+                },
+                error: function (ex) {
+                    alert('Lỗi load món được chọn: ' + ex);
+                }
+            });
+        }
+       
+        else {
+            var idmon = abc.id;
+            $.ajax({
+                url: "/BangGia/LuuDatMon", // we are calling json method
+                data: { idmonan: idmon },
+                success: function (response) {
+                    $(response).each(function (i, e) {
+                        $('#' + 'p' + e.idmonan).remove();
+                    });
+
+                },
+                error: function (ex) {
+                    alert('Lỗi load món được chọn: ' + ex);
+                }
+            });
+        }
+    }
+    // LOAD DANH SÁCH CHỌN
+    //$(function () {
+    //    $('.monan_check').click(function () {        
+    //    });
+    //});
+
+   
+
+
+    var check = $('input[name="idMon[]"]');
+    var idList = '';
+   
+
+    check.on("click", function () {
+        
+        var $checked = check.filter(":checked"),
+            checkedValues = $checked.map(function () {
+                return this.value;
+            }).get();
+        idList = JSON.stringify(checkedValues);
+       
+        $("#chuoian").val(idList)
+       
+    })
+    
+
+    
+    $(function () {
+        $("button[data-action]").click(function () {
+           
+                var action = $(this).attr("data-action");
+                this.form.action = "/BangGia/" + action;
+                alert('Vui lòng check vào món ăn cần đặt')
+            
+        });
+    });
+</script>

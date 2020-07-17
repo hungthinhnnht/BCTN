@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div style="background-color: #f5f9fc">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="lienhe-tit">
+                    <h2>Liên hệ với chúng tôi</h2>
+                </div>
+                <div class="lienhe-line"> </div>
+                <div class="lienhe-thongtin">
+                    <p>DỊCH VỤ TIỆC CƯỚI HT</p>
+                    <p>Số20 Đại lộ Bình Dương 15 Đường 65, P. Phú Tân 2, TP. Thủ Dầu Một, Bình Dương</p>
+                    <p><span>Hotline:</span> 0912 345 678 - 000999 29292</p>
+                    <p><span>Email:</span>cskh.tiecuoiht@gmail.com</p>
+                    <a href="google.com"><span>Website:</span>google.com</a>
+                </div>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTTDVVLBD%2F&tabs=timeline&width=1200&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="1200" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              </div>
+            <div class="col-md-6">
+
+
+                <form class="omb_loginForm" onsubmit="return checkform(this)" action="" autocomplete="off" method="post">
+                      
+                    @using (Html.BeginForm("TuVan", "LienHe", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="lienhe-tit">
+                            <h2>Liên hệ trực tuyến</h2>
+                        </div>
+                        <div class="lienhe-line"></div>
+                        <div class="tructuyen-thongtin">
+                            <div class="form-group">
+                                <input name="Hoten" id="txtName" placeholder="Tên..." class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input name="Email" id="txtEmail" placeholder="Email..." class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input name="Dienthoai" id="txtPhone" placeholder="Số điện thoại..." class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <textarea name="Loinhan" placeholder="Lời nhắn..." id="txtContent"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input name="IdTestTuVan" id="IdTestTuVan" value="1" style="display:none" placeholder="Tư Vấn" class="form-control" />
+                            </div>
+                        </div>
+                          if (Session["TuVan"] == "DaNhan")
+                        {
+                                <span class="help-block text-danger" style="font-family:monospace;font-size:18px">Gửi thông tin thành công. Nhân viên sẽ liên hệ với bạn sớm nhất</span>
+                      
+                        }
+                        else
+                          { 
+                              <b style="display:none">ádadsad</b>
+                          }
+                        <div class="row send_email">
+                            <div class="col-sm-12 form-group">
+                                <button class="btn btn-lg pull-right" id="btnSendEmail" type="submit">
+
+                                    <span id="ContenButtonSend"> Gửi </span>
+                                    @*<span class="glyphicon glyphicon-send"></span>*@
+                                </button>
+                            </div>
+                        </div>
+
+                    }
+                </form>
+      
+            </div>
+
+                         
+        </div>
+    </div>
+</div>
+@Html.Action("GioHang", "Home")
+<script>
+
+    $(function () {
+        $("#btnSendEmail").click(function () {
+            this.form.action = "/LienHe/TuVan";
+        });
+    });
+
+</script>

@@ -1,0 +1,148 @@
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll.config
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\DatTiec.pdb
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Infrastructure.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.csprojResolveAssemblyReference.cache
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.pdb
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll.config
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\DatTiec.pdb
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Infrastructure.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.xml
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.csprojResolveAssemblyReference.cache
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.dll
+D:\Công việc\Website đặt tiệc\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.pdb
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll.config
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\DatTiec.pdb
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Infrastructure.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.csprojResolveAssemblyReference.cache
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec1304\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.pdb
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll.config
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\DatTiec.pdb
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\EntityFramework.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\EntityFramework.SqlServer.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\EntityFramework.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\EntityFramework.SqlServer.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.xml
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.csprojResolveAssemblyReference.cache
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.dll
+C:\Users\thongtin09\Desktop\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.pdb
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.csprojResolveAssemblyReference.cache
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll.config
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\DatTiec.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\DatTiec.pdb
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\EntityFramework.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\EntityFramework.SqlServer.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Infrastructure.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\EntityFramework.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\EntityFramework.SqlServer.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\Newtonsoft.Json.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Net.Http.Formatting.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Helpers.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Http.WebHost.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Mvc.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.Razor.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Deployment.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\bin\System.Web.WebPages.Razor.xml
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.dll
+D:\Thanh Nhựt\Phòng Thông tin\Anh Thịnh\DatTiec24042020\DatTiec\DatTiec\DatTiec\obj\Debug\DatTiec.pdb

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+<div class="container">
+    <div class="sk_banner">
+        <img src="/Content/img/skbanner.jpg">
+    </div>
+    <div class="row">
+
+
+
+
+        <div class="col-md-8">
+
+            <div class="list_dv">
+                <h2 class="text-center">
+                    <span class="tvtc-tit">
+                        DANH SÁCH DỊCH  VỤ
+                    </span>
+                </h2>
+                <div class="row">
+                    @foreach (var dv in ViewBag.LoaiDichVu)
+                    {
+                        <div class="col-md-4">
+                            <div class="loaidv_item">
+                                <a href="/DV/LayDanhSachDichVu/@dv.idloai">@dv.Tenloai</a>
+                                <img src="~/Content/img/tiec1.jpg" />
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            @Html.Action("TinTuc", "DV")
+        </div>
+    </div>
+   
+</div>
+@Html.Action("GioHang", "Home")
+
+
+
+<script>
+   
+        
+    
+</script>

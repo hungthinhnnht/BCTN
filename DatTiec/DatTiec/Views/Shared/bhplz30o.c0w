@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ĐẶT TIỆC CƯỚI HỎI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/owl-carousel/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/css/Home.css" rel="stylesheet" />
+    <link href="~/Content/css/Responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Content/js/jquery.min.js"></script>
+</head>
+<body>
+
+    @*Menu*@
+    @Html.Partial("~/Views/Shared/_MainMenu.cshtml")
+
+
+
+    @RenderBody()
+
+
+    @*FOOTER*@
+    @Html.Partial("~/Views/Shared/_MainFooter.cshtml")
+
+
+
+
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/popper.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/js/Home.js"></script>
+
+    <script>
+
+  
+     
+    </script>
+</body>
+</html>
+
+

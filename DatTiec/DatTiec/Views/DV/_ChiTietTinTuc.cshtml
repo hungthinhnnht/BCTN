@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "_ChiTietTinTuc";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+               @foreach (DatTiec.Models.TinTuc ct in Model)
+                {
+                <h2>@ct.Tieude</h2>
+                  <b >@ct.Tomtat</b>
+                     <img style="width:100%" src="~/Content/img_tt/@ct.Hinh" />
+                   <div class="abc" style="display:none;">
+                       @ct.Noidung
+                   </div>
+                    <p id="cttt_nd" style="margin:10px 0;">
+
+                    </p>
+                }
+            
+        </div>
+        <div class="col-md-3">
+            <img style="width:100%" src="~/Content/img/banner1.jpg" />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var content = $('.abc').text();
+        var text = $(content).text();
+       // alert(text);
+        document.getElementById("cttt_nd").innerHTML = text;
+    });
+
+
+
+
+
+   
+    
+</script>

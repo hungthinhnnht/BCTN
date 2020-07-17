@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "_DangKy";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto" >
+            <h2 class="text-center">
+                <span class="dtn-tit">
+                    ĐĂNG KÝ
+                </span>
+            </h2>
+        </div>
+    </div>
+    <div class="row " style="padding-bottom:20px">
+        <div class="col-xs-12 col-sm-6 mx-auto">
+            <form class="omb_loginForm" onsubmit="return checkform(this)" action="" autocomplete="off" method="post">
+                @using (Html.BeginForm("DangKy", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                     
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="Hoten" placeholder="Họ và Tên" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="Tendangnhap" placeholder="Tên tài khỏan" required>
+                    </div>
+                    <span class="help-block"></span>
+
+
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="Email" placeholder="Email" required>
+                    </div>
+                    <span class="help-block"></span>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="text" class="form-control" name="Diachi" placeholder="Địa chỉ" required>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="text" class="form-control" name="Dienthoai" placeholder="Điện thoại" required>
+                    </div>
+
+
+
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" name="MatKhau" placeholder="Mật khẩu" required>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" name="MatKhau2" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+
+
+                     <!-- START CAPTCHA -->
+                    <div class="capcha">
+                        <label style="font-family:monospace;margin:0">Mã xác thực:</label>
+                        <div id="CaptchaDiv"></div>
+                    </div>
+                    <span class="help-block"></span>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="hidden" id="txtCaptcha">
+                        <input placeholder="Mã xác thực" class="form-control" type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+                    </div>
+                    <span class="help-block"></span>
+                    <div class="row">
+                        <p id="tbCapcha" class=" alert alert-danger"></p>
+                    </div>
+
+
+                    <span class="help-block" style="font-family:monospace">@Html.ValidationSummary(false, "", new { @class = "text-danger" })</span>
+                    <button data-action="DangKy" class="btn btn-lg btn-primary btn-block"><i class="fa fa-user-plus"></i> ĐĂNG KÝ</button>
+
+                }
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+
+    $(function () {
+        $("button[data-action]").click(function () {
+            var action = $(this).attr("data-action");
+            this.form.action = "/Home/" + action;
+
+        });
+    });
+
+
+    
+
+
+    // Captcha Script
+
+    function checkform(theform) {
+        var why = "";
+
+        if (theform.CaptchaInput.value == "") {
+            why += "Vui lòng nhập mã xác thực.\n";
+            //document.getElementById('tb1').style.display = 'block'
+        }
+
+        if (theform.CaptchaInput.value != "") {
+            //if (ValidCaptcha(theform.CaptchaInput.value) == false) {
+            //    why += "Mã Capcha không chính xác.\n";
+            //    //document.getElementById('tb2').style.display = 'block'
+            //}
+            if (theform.CaptchaInput.value != document.getElementById('txtCaptcha').value) {
+                why += "Mã xác không chính xác.Vui lòng nhập lại .\n";
+                //document.getElementById('tb1').style.display = 'block'
+            }
+        }
+        if (why != "") {
+            document.getElementById('tbCapcha').innerHTML = why;
+            document.getElementById('tbCapcha').style.display = 'block';
+            return false;
+        }
+    }
+
+    var a = Math.ceil(Math.random() * 9) + '';
+    var b = Math.ceil(Math.random() * 9) + '';
+    var c = Math.ceil(Math.random() * 9) + '';
+    var d = Math.ceil(Math.random() * 9) + '';
+    var e = Math.ceil(Math.random() * 9) + '';
+
+    var code = a + b + c + d + e;
+    document.getElementById("txtCaptcha").value = code;
+    document.getElementById("CaptchaDiv").innerHTML = code;
+
+    // Validate input against the generated number
+    function ValidCaptcha() {
+        var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+        var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+        if (str1 == str2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>

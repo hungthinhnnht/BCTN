@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "_DanhSachDichVu";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<div class="container">
+    <div class="sk_banner">
+        <img src="/Content/img/skbanner.jpg">
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+       
+            <div class="list_dvtiec">
+                <h2 class="text-center">
+                    <span class="tvtc-tit">
+                        DANH SÁCH DỊCH  VỤ
+                    </span>
+                </h2>
+                @foreach (DatTiec.Models.Dichvu th in Model)
+                                     
+                    {
+                    <div class="dvtiec_item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="tiec_img">
+                                    <img src="~/Content/img_dv/@th.Hinhanh" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="tiec_cont">
+                                    <a href="/DV/LayChiTietDichVu/@th.iddichvu" class="tiec_link">
+                                        @th.Tendichvu
+                                    </a>
+                                    <p class="tiec_des block-ellips">
+                                        @th.Mota
+                                    </p>
+                                    <a href="/DV/LayChiTietDichVu/@th.iddichvu" class="tiec_xct">
+                                        > Xem chi tiết
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            @Html.Action("TinTuc", "DV")
+        </div>
+    </div>
+  
+
+</div>
+<ul></ul>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "_DatTiecNhanh";
+}
+
+<div class="dtn" style="background: url('../Content/img/dtn.jpg')">
+   
+    <div class="dtn_overlay">
+        <h2 class="text-center">
+            <span class="dtn-tit">
+                TƯ VẤN
+            </span>
+        </h2>
+        <div class="form_dtn">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form class="dtn_form" method="post" onsubmit="return checkform(this)" action="" autocomplete="off">
+                        @using (Html.BeginForm("TuVan", "LienHe", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <label>Tên của bạn: (bắt buộc)</label>
+                        <input name="Hoten" class="input" type="text" value="">
+
+                        <label>Email: </label>
+                        <input name="Email" class="input" type="text" value="">
+
+                        <label>Điện thoại liên hệ: (bắt buộc)</label>
+                        <input name="Dienthoai" class="input" type="text" value="">
+
+                        <label>Nội dung đặt tiệc: (bắt buộc)</label>
+                        <textarea name="Loinhan" class="textarea" placeholder="Bạn vui lòng nhập các thông tin như: bạn muốn tổ chức tiệc gì, bao nhiêu bàn, menu gồm các món nào, thời gian bắt đầu... "></textarea>
+                             <div class="form-group">
+                                <input name="IdTestTuVan" id="IdTestTuVan" value="2" style="display:none" placeholder="Tư Vấn" class="form-control" />
+                            </div>
+                            <div class="text-center">
+                                <button class="btn-primary btn_datngay" type="submit" id="btnSendTuVan">Gửi</button>
+                            </div>
+                    }
+                    </form>
+                </div>
+            </div>
+       
+          
+        </div>
+    </div>
+    
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    $(function () {
+        $("#btnSendTuVan").click(function () {
+            this.form.action = "/LienHe/TuVan";
+        });
+    });
+
+</script>

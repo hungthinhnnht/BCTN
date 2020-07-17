@@ -1,0 +1,44 @@
+﻿<div class="tiecvuatochuc">
+    <h2 class="text-center">
+        <span class="tvtc-tit">
+            TIN TỨC
+        </span>
+    </h2>
+    <div class="tvtc_list">
+            @foreach (var tt in ViewBag.TinTuc)
+            {
+                <div class="tt-item">
+                    <a href="/DV/ChiTietTinTuc/@tt.idtin">
+                        <div class="row">
+                            <div class="col-md-12 col-12">
+                                <div class="row">
+                                    <div class="col-md-5 col-6 pr-0">
+                                        <div class="tt-item-img">
+                                            <img src="~/Content/img_tt/@tt.Hinh" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-6">
+                                        <div class="tt-item-tit">
+                                            <p>@tt.Tieude</p>
+                                        </div>
+                                        <div class="tt-item-cont" id="tt-item-cont">
+                                            <p> @tt.Tomtat</p>
+                                        </div>
+                                        <div class="tt-item-cont">
+                                            <p> @tt.Tomtat</p>
+                                        </div>
+                                        <div class="tt-item-time">
+                                            <i class="fa fa-calendar"> @Html.FormatValue(@tt.Ngaydang, "{0:dd/MM/yyyy}")</i>
+                                            <i class="fa fa-eye"> 2909</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            }
+    </div>
+</div>
+

@@ -1,0 +1,13 @@
+﻿
+@media only screen and (max-width: 768px) {
+    .news_slide img {
+        height:145px;
+    }
+    .slide_home .owl-nav button {
+    height:30px;
+    width:30px;
+    }
+    .slide_home .owl-nav span {
+       font-size:15px;
+    }
+}

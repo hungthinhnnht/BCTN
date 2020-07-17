@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User_User" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="UTF-8">
+	<title>Secret Restaurant</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+       
+     
+
+
+        <div class="header">
+		<div>
+			<a href="index.html">
+                <img src="images/Untitled-4.png" alt="logo" /></a>
+		</div>
+            <%--<form action="index.html">--%>&nbsp;
+		    <%--</form>--%>
+	</div>
+	<div class="body">
+		<div>
+			<div class="header">
+				<ul>
+					<li class="current">
+						<a href="TrangChu.aspx">TRANG CHỦ</a>
+					</li>
+                     
+					<li>
+						<a href="DS_LoaiMA.aspx">MÓN ĂN</a>
+					</li>
+					<li>
+						<a href="DS_LoaiDV.aspx">DỊCH VỤ</a>
+					</li>
+					<li>
+						<a href="DS_DatTiec.aspx">ĐẶT TIỆC</a>
+					</li>
+					<li>
+						<a href="DS_TinTuc.aspx">TIN TỨC</a>
+					</li>
+					<li>
+						<a href="Menu.aspx">MENU</a>
+
+					</li>
+                   
+				</ul>
+			</div>
+			 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+		</div>
+		<div>
+			<div>
+				<h3>Quảng Cáo</h3>
+
+                            <asp:DataList ID="dtlquangcao" runat="server" Width="100%">
+                                <ItemTemplate>
+                                    &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl='<%# "~/Hinh/QuangCao/"+Eval("Hinh") %>' Width="200px" />
+                                </ItemTemplate>
+                </asp:DataList>
+
+				
+				
+			</div>
+			<div>
+				<h3>Tư Vấn Trực Tuyến</h3>
+				<ul id="featured">
+					
+						
+						
+				</ul>
+			</div>
+			<div>
+				<h3>Mọi Chi Tiếc Liên Hệ</h3>
+				<ul id="blog">
+					<li>
+						<a href="#">
+Trung Tâm DV Tiệc Cưới <p align="center">Secret</p>
+
+<p>Đại Chỉ: Đại Học Thủ Dầu Một</p>
+<P>Email : Secret@gmail.com</P>
+<p>SĐT: 07755119688</p>
+                            
+						</a>
+						<asp:Button ID="btnDN" runat="server" Text="Đăng Nhập" PostBackUrl="~/User/UserDN.aspx" Width="90%" />
+                        <asp:Label ID="lbHoten" runat="server"></asp:Label>
+
+                       <p align="center"> <asp:Button ID="btnThoat" runat="server" Text="Xem Lịch Sử Đặt Tiệc" PostBackUrl="~/User/LSDT.aspx"  /></p>
+                         <p align="center"> <asp:Button ID="Button1" runat="server" Text="Đăng Ký" PostBackUrl="~/User/KHDangKy.aspx"  /></p>
+					</li>
+					
+				</ul>
+			</div>
+			<div>
+				<h3>Get Updates</h3>
+				<a href="http://facebook.com" target="_blank" id="facebook">Facebook</a>
+				<a href="http://twitter.com" target="_blank" id="twitter">Twitter</a>
+				<a href="http://youtube.com" target="_blank" id="youtube">Youtube</a>
+				<a href="http://flickr.com" target="_blank" id="flickr">Flickr</a>
+				<a href="http://googleplus.com" target="_blank" id="googleplus">Google&#43;</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			<p>
+				&copy; Web Đặt Tiệc Cưới
+			</p>
+		</div>
+	</div>
+
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CTDatTiec">
+    <Key>
+      <PropertyRef Name="idct" />
+    </Key>
+    <Property Name="idct" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iddattiec" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="idmonan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="iddichvu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Soluong" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="DatTiec" Relationship="Self.FK_CTDatTiec_DatTiec" FromRole="CTDatTiec" ToRole="DatTiec" />
+  </EntityType>
+  <EntityType Name="CTDichvu">
+    <Key>
+      <PropertyRef Name="idChiTiet" />
+    </Key>
+    <Property Name="idChiTiet" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iddichvu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Hinhanh" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="Gia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Dichvu" Relationship="Self.FK_CTDichvu_Dichvu" FromRole="CTDichvu" ToRole="Dichvu" />
+  </EntityType>
+  <EntityType Name="CTMenu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Masomenu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="idmonan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Menusan" Relationship="Self.FK_CTMenu_Menusan" FromRole="CTMenu" ToRole="Menusan" />
+  </EntityType>
+  <EntityType Name="DatTiec">
+    <Key>
+      <PropertyRef Name="iddattiec" />
+    </Key>
+    <Property Name="iddattiec" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hoten" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ngaydat" Type="DateTime" Precision="0" />
+    <Property Name="Ngaydai" Type="DateTime" Precision="0" />
+    <Property Name="Diachi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Dienthoai" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tongsotien" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Trangthai" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Soluongban" Type="Int32" />
+    <Property Name="Masomenu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Ghichu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Giamenu" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Tendangnhap" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TGD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CTDatTiecs" Relationship="Self.FK_CTDatTiec_DatTiec" FromRole="DatTiec" ToRole="CTDatTiec" />
+  </EntityType>
+  <EntityType Name="Dichvu">
+    <Key>
+      <PropertyRef Name="iddichvu" />
+    </Key>
+    <Property Name="iddichvu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tendichvu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="idloai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Hinhanh" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="BatBuoc" Type="Boolean" />
+    <NavigationProperty Name="CTDichvus" Relationship="Self.FK_CTDichvu_Dichvu" FromRole="Dichvu" ToRole="CTDichvu" />
+    <NavigationProperty Name="loaiDichVu" Relationship="Self.FK_Dichvu_loaiDichVu" FromRole="Dichvu" ToRole="loaiDichVu" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hoten" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tendangnhap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Diachi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Dienthoai" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="loaiDichVu">
+    <Key>
+      <PropertyRef Name="idloai" />
+    </Key>
+    <Property Name="idloai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tenloai" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="Dichvus" Relationship="Self.FK_Dichvu_loaiDichVu" FromRole="loaiDichVu" ToRole="Dichvu" />
+  </EntityType>
+  <EntityType Name="LoaiMon">
+    <Key>
+      <PropertyRef Name="idloaimon" />
+    </Key>
+    <Property Name="idloaimon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tenloai" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <NavigationProperty Name="MonAns" Relationship="Self.FK_MonAn_LoaiMon" FromRole="LoaiMon" ToRole="MonAn" />
+  </EntityType>
+  <EntityType Name="Menusan">
+    <Key>
+      <PropertyRef Name="Masomenu" />
+    </Key>
+    <Property Name="Masomenu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tengoi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <NavigationProperty Name="CTMenus" Relationship="Self.FK_CTMenu_Menusan" FromRole="Menusan" ToRole="CTMenu" />
+  </EntityType>
+  <EntityType Name="MonAn">
+    <Key>
+      <PropertyRef Name="idmonan" />
+    </Key>
+    <Property Name="idmonan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idloaimon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tenmon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Hinhanh" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <NavigationProperty Name="LoaiMon" Relationship="Self.FK_MonAn_LoaiMon" FromRole="MonAn" ToRole="LoaiMon" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="Tendn" />
+    </Key>
+    <Property Name="Tendn" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hoten" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="Quyen" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="QuangCao">
+    <Key>
+      <PropertyRef Name="idqc" />
+    </Key>
+    <Property Name="idqc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tenqc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Ngaybatdau" Type="DateTime" Precision="3" />
+    <Property Name="Ngayketthuc" Type="DateTime" Precision="3" />
+    <Property Name="Hinh" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TinTuc">
+    <Key>
+      <PropertyRef Name="idtin" />
+    </Key>
+    <Property Name="idtin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tieude" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Ngaydang" Type="DateTime" Precision="3" />
+    <Property Name="Noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Hinh" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Trangthai" Type="Boolean" />
+    <Property Name="Tomtat" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_CTDatTiec_DatTiec">
+    <End Role="DatTiec" Type="Self.DatTiec" Multiplicity="0..1" />
+    <End Role="CTDatTiec" Type="Self.CTDatTiec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatTiec">
+        <PropertyRef Name="iddattiec" />
+      </Principal>
+      <Dependent Role="CTDatTiec">
+        <PropertyRef Name="iddattiec" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTDichvu_Dichvu">
+    <End Role="Dichvu" Type="Self.Dichvu" Multiplicity="0..1" />
+    <End Role="CTDichvu" Type="Self.CTDichvu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dichvu">
+        <PropertyRef Name="iddichvu" />
+      </Principal>
+      <Dependent Role="CTDichvu">
+        <PropertyRef Name="iddichvu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTMenu_Menusan">
+    <End Role="Menusan" Type="Self.Menusan" Multiplicity="0..1" />
+    <End Role="CTMenu" Type="Self.CTMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menusan">
+        <PropertyRef Name="Masomenu" />
+      </Principal>
+      <Dependent Role="CTMenu">
+        <PropertyRef Name="Masomenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dichvu_loaiDichVu">
+    <End Role="loaiDichVu" Type="Self.loaiDichVu" Multiplicity="0..1" />
+    <End Role="Dichvu" Type="Self.Dichvu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaiDichVu">
+        <PropertyRef Name="idloai" />
+      </Principal>
+      <Dependent Role="Dichvu">
+        <PropertyRef Name="idloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MonAn_LoaiMon">
+    <End Role="LoaiMon" Type="Self.LoaiMon" Multiplicity="0..1" />
+    <End Role="MonAn" Type="Self.MonAn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiMon">
+        <PropertyRef Name="idloaimon" />
+      </Principal>
+      <Dependent Role="MonAn">
+        <PropertyRef Name="idloaimon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatTiecEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CTDatTiecs" EntityType="Self.CTDatTiec" />
+    <EntitySet Name="CTDichvus" EntityType="Self.CTDichvu" />
+    <EntitySet Name="CTMenus" EntityType="Self.CTMenu" />
+    <EntitySet Name="DatTiecs" EntityType="Self.DatTiec" />
+    <EntitySet Name="Dichvus" EntityType="Self.Dichvu" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="loaiDichVus" EntityType="Self.loaiDichVu" />
+    <EntitySet Name="LoaiMons" EntityType="Self.LoaiMon" />
+    <EntitySet Name="Menusans" EntityType="Self.Menusan" />
+    <EntitySet Name="MonAns" EntityType="Self.MonAn" />
+    <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+    <EntitySet Name="QuangCaos" EntityType="Self.QuangCao" />
+    <EntitySet Name="TinTucs" EntityType="Self.TinTuc" />
+    <AssociationSet Name="FK_CTDatTiec_DatTiec" Association="Self.FK_CTDatTiec_DatTiec">
+      <End Role="DatTiec" EntitySet="DatTiecs" />
+      <End Role="CTDatTiec" EntitySet="CTDatTiecs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTDichvu_Dichvu" Association="Self.FK_CTDichvu_Dichvu">
+      <End Role="Dichvu" EntitySet="Dichvus" />
+      <End Role="CTDichvu" EntitySet="CTDichvus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTMenu_Menusan" Association="Self.FK_CTMenu_Menusan">
+      <End Role="Menusan" EntitySet="Menusans" />
+      <End Role="CTMenu" EntitySet="CTMenus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dichvu_loaiDichVu" Association="Self.FK_Dichvu_loaiDichVu">
+      <End Role="loaiDichVu" EntitySet="loaiDichVus" />
+      <End Role="Dichvu" EntitySet="Dichvus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MonAn_LoaiMon" Association="Self.FK_MonAn_LoaiMon">
+      <End Role="LoaiMon" EntitySet="LoaiMons" />
+      <End Role="MonAn" EntitySet="MonAns" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
